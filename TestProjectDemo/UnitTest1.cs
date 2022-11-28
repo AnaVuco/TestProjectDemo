@@ -38,7 +38,8 @@ namespace TestProjectDemo
             _homePage.EMail.SendKeys("mail@mail.com");
             _homePage.Phone.SendKeys("38112345");
             _homePage.SaveButton.Click();
-            _homePage.LogoutButton.Click();
+
+            Assert.That("Saved",Is.EqualTo(_homePage.SaveText.Text));
         }
 
 
